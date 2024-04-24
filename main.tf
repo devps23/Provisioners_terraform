@@ -10,8 +10,8 @@ resource "aws_instance" "web" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo dnf install nginx -y",
-      "sudo pip install ansible"
+      "sudo dnf install nginx -y"
+
     ]
   }
 }
