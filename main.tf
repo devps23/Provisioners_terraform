@@ -12,7 +12,7 @@ resource "null_resource" "demo" {
       host     = aws_instance.web.public_ip
     }
     inline = [
-      "  dnf install nginx -y"
+      "  sudo dnf install nginx -y"
     ]
   }
 }
