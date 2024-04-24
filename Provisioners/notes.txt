@@ -6,7 +6,7 @@ to rerun the terraform,terraform will destroy current instance and recreate the 
 
 now null_resource will come into the picture to run provisioner without creating an instance.
 
-first remove sudo of any package and then run,instance create and it shows an error.
+first remove sudo(root privilige) of any package and then run,instance create and it shows an error.
 then add sudo of that package and then run ,destroy and recreate the instance and installed the package.
 so here to decouple
 
