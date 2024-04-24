@@ -13,4 +13,11 @@ so here to decouple
 * terraform will not destroy the instance and recreate.
 * provisoner will run again and again.
 
+* increasing the instances depends on instance type (like t3.micro,t3.small,...) cost will be high.
+so in organizations first they will check the capacity to store the instances.
+Spot Instances offer up to 90% discount but carry the risk of interruption:
+unable to store data in database in spot instances
+spot instance advisor:search in google
+Reserved Instances offer up to 72% decreased rates with high availability, but long commitment periods.
+
 
