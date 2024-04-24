@@ -1,12 +1,15 @@
 resource "aws_instance" "web" {
   ami = "ami-090252cbe067a9e58"
   instance_type = "t3.micro"
+
+}
+resource "null_resource" "demo" {
   provisioner "remote-exec" {
     connection {
       type     = "ssh"
       user     = "ec2-user"
       password = "DevOps321"
-      host     = self.public_ip
+      host     = aws_instance.web.public_ip
     }
     inline = [
       "sudo dnf install nginx -y"
@@ -14,3 +17,4 @@ resource "aws_instance" "web" {
     ]
   }
 }
+

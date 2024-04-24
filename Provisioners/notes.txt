@@ -1,0 +1,11 @@
+1.to create an instance by using terraform
+2.by usimg provisioners ,to install packages through automation once instance can be created
+3.the behaviour of the terraform is:
+to rerun the terraform,terraform will destroy current instance and recreate the instance.
+so here to decouple
+
+terraform will not destroy the instance and recreate
+provisoner will run again and again
+
+now null_resource will come into the picture to run provisioner without creating an instance.
+
